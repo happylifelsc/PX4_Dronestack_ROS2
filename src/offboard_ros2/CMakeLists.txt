@@ -47,13 +47,22 @@ include_directories(
 
 # Add executables
 add_executable(offboard_ctrl_ros2 src/offboard_ctrl_ros2.cpp)
+add_executable(gazebo_ctrl_ros2 src/gazebo_ctrl_ros2.cpp)
+add_executable(stair_ctrl_ros2 src/stair_ctrl_ros2.cpp)
+
+
 ament_target_dependencies(offboard_ctrl_ros2 rclcpp std_msgs geometry_msgs nav_msgs mavros_msgs tf2 tf2_ros tf2_msgs Eigen3)
+ament_target_dependencies(gazebo_ctrl_ros2 rclcpp std_msgs geometry_msgs nav_msgs mavros_msgs tf2 tf2_ros tf2_msgs Eigen3)
+ament_target_dependencies(stair_ctrl_ros2 rclcpp std_msgs geometry_msgs nav_msgs mavros_msgs tf2 tf2_ros tf2_msgs Eigen3)
+
+
 
 # gazebo_msgs
 
 # Install targets
-install(TARGETS offboard_ctrl_ros2
+install(TARGETS offboard_ctrl_ros2 gazebo_ctrl_ros2 stair_ctrl_ros2
   DESTINATION lib/${PROJECT_NAME})
+
 
 # Install headers
 install(DIRECTORY include/offboard_ros2/

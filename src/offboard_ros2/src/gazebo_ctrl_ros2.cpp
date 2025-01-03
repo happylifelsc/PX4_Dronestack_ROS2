@@ -20,8 +20,8 @@ double vicon_posi_z = 0.4180;
 // define translation and rotation matrix
 Eigen::Quaterniond q; // (gazebo)
 
-// // (gazebo)
-// Eigen::Vector3d translation(-vicon_posi_x, -vicon_posi_y, -vicon_posi_z);
+// (gazebo)
+Eigen::Vector3d translation(-vicon_posi_x, -vicon_posi_y, -vicon_posi_z);
 
 
 bool vicon_data_stored = false;
@@ -34,8 +34,8 @@ int main(int argc, char **argv) {
     rclcpp::init(argc, argv);
     node = rclcpp::Node::make_shared("offb_node");
 
-    // // (gazebo)
-    // q = rpyToQuaternion(vicon_orient_r, vicon_orient_p, vicon_orient_y).conjugate();
+    // (gazebo)
+    q = rpyToQuaternion(0, 0, 0).conjugate();
 
 
     auto sensor_qos = rclcpp::SensorDataQoS();
@@ -296,14 +296,13 @@ Eigen::Quaterniond rpyToQuaternion(double roll, double pitch, double yaw) {
 bool isAtPosition(double x, double y, double z, double xy_offset, double z_offset) {
     Eigen::Vector2d desired_posi_xy(x, y);
 
-    // (vicon) or (gazebo)
+    // (gazebo)
     Eigen::Vector2d current_posi_xy(current_pose.pose.position.x, current_pose.pose.position.y);
     return ((desired_posi_xy - current_posi_xy).norm() < xy_offset && std::abs(z - current_pose.pose.position.z) < z_offset);
 
     // // (vicon)  
     // Eigen::Vector2d current_posi_xy(vicon_pose.transform.translation.x, vicon_pose.transform.translation.y);
     // return ((desired_posi_xy - current_posi_xy).norm() < xy_offset && std::abs(z - vicon_pose.transform.translation.z) < z_offset);
-
 }
 
 
