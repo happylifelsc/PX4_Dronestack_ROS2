@@ -1,0 +1,44 @@
+# start mavros
+cd ~/SDK_ros2_ws/src/mavros/mavros
+source ~/SDK_ros2_ws/install/setup.bash
+ros2 launch launch/px4.launch fcu_url:="/dev/ttyACM0:115200"
+
+#Start Hokuyo UST-1-LX driver:
+ros2 run urg_node urg_node_driver --ros-args --params-file ~/SDK_ros2_ws/src/urg_node/launch/urg_node_ethernet.yaml
+
+#visulize the laser in rviz:
+ros2 run tf2_ros static_transform_publisher --frame-id world --child-frame-id laser
+ros2 run robot_state_publisher robot_state_publisher ~/SDK_ros2_ws/install/urg_node/share/urg_node/launch/hokuyo_laser.urdf
+
+#usb cam start
+ros2 run usb_cam usb_cam_node_exe
+Rviz topic:/image_raw
+
+ref: https://github.com/ros-drivers/urg_node
+
+
+
+// vrpn mocap
+ros2 launch vrpn_mocap client.launch.yaml server:=192.168.0.101 port:=3883
+ros2 topic echo /vrpn_mocap/x8_1/pose
+ros2 topic echo /mavros/local_position/pose
+
+
+
+# start ros2 node
+cd ~/SDK_ros2_ws/
+source ~/SDK_ros2_ws/install/setup.bash
+ros2 run offboard_ros2 stair_ctrl_ros2
+
+
+# simplified commands, stair_ctrl.launch.xml still need to be debugged
+ros2 launch mavros px4.launch fcu_url:="/dev/ttyACM0:115200"
+source ~/SDK_ros2_ws/install/setup.bash
+ros2 launch offboard_ros2 stair_ctrl.launch.xml
+
+
+# record data (vicon and ToF)
+cd ~/SDK_ros2_ws/
+ros2 bag record combined_data
+ros2bag-convert xxxx.db3
+

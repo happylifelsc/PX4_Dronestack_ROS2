@@ -1,0 +1,33 @@
+[  2%] Built target offboard_ros2__cpp
+[ 13%] Built target offboard_ros2__rosidl_generator_c
+[  8%] [32mBuilding CXX object CMakeFiles/stair_ctrl_ros2.dir/src/stair_ctrl_ros2.cpp.o[0m
+[ 18%] Built target offboard_ctrl_ros2
+[ 24%] Built target gazebo_ctrl_ros2
+[ 24%] Built target ament_cmake_python_copy_offboard_ros2
+[35m[1mConsolidate compiler generated dependencies of target offboard_ros2__rosidl_typesupport_cpp[0m
+[35m[1mConsolidate compiler generated dependencies of target offboard_ros2__rosidl_typesupport_fastrtps_cpp[0m
+[ 32%] Built target offboard_ros2__rosidl_typesupport_fastrtps_c
+[ 40%] Built target offboard_ros2__rosidl_typesupport_cpp
+[ 48%] Built target offboard_ros2__rosidl_typesupport_fastrtps_cpp
+[ 56%] Built target offboard_ros2__rosidl_typesupport_introspection_c
+[ 64%] Built target offboard_ros2__rosidl_typesupport_c
+[ 72%] Built target offboard_ros2__rosidl_typesupport_introspection_cpp
+[ 72%] Built target offboard_ros2
+[ 75%] [34m[1mGenerating Python code for ROS interfaces[0m
+In file included from [01m[K/home/orinnano/SDK_ros2_ws/src/offboard_ros2/src/stair_ctrl_ros2.cpp:1[m[K:
+[01m[K/home/orinnano/SDK_ros2_ws/src/offboard_ros2/include/offboard_ros2/stair_ctrl_ros2.h:11:10:[m[K [01;31m[Kfatal error: [m[Koffboard_ros2/msg/combined_data.hpp: No such file or directory
+   11 | #include [01;31m[K<offboard_ros2/msg/combined_data.hpp>[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/stair_ctrl_ros2.dir/build.make:76: CMakeFiles/stair_ctrl_ros2.dir/src/stair_ctrl_ros2.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:648: CMakeFiles/stair_ctrl_ros2.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+running egg_info
+writing offboard_ros2.egg-info/PKG-INFO
+writing dependency_links to offboard_ros2.egg-info/dependency_links.txt
+writing top-level names to offboard_ros2.egg-info/top_level.txt
+reading manifest file 'offboard_ros2.egg-info/SOURCES.txt'
+writing manifest file 'offboard_ros2.egg-info/SOURCES.txt'
+[ 75%] Built target ament_cmake_python_build_offboard_ros2_egg
+[ 75%] Built target offboard_ros2__py
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,8 @@
+std_msgs/Header header
+float32 stair_pos_z
+float32 vicon_posi_x
+float32 vicon_posi_y
+float32 vicon_posi_z
+
+
+

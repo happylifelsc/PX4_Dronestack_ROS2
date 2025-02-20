@@ -1,0 +1,5 @@
+source;share/offboard_ros2/local_setup.bash
+source;share/offboard_ros2/local_setup.dsv
+source;share/offboard_ros2/local_setup.ps1
+source;share/offboard_ros2/local_setup.sh
+source;share/offboard_ros2/local_setup.zsh

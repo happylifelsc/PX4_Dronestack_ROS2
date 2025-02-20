@@ -1,0 +1,9 @@
+In file included from [01m[K/home/orinnano/SDK_ros2_ws/src/offboard_ros2/src/stair_ctrl_ros2.cpp:1[m[K:
+[01m[K/home/orinnano/SDK_ros2_ws/src/offboard_ros2/include/offboard_ros2/stair_ctrl_ros2.h:8:10:[m[K [01;31m[Kfatal error: [m[Koffboard_ros2/combined_data.hpp: No such file or directory
+    8 | #include [01;31m[K<offboard_ros2/combined_data.hpp>[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/stair_ctrl_ros2.dir/build.make:76: CMakeFiles/stair_ctrl_ros2.dir/src/stair_ctrl_ros2.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:648: CMakeFiles/stair_ctrl_ros2.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

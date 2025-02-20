@@ -17,10 +17,23 @@ find_package(nav_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(tf2_msgs REQUIRED)
+# find_package(rosidl_default_generators REQUIRED)
+find_package(msg_interfaces REQUIRED) 
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
+
+
+
+# rosidl_generate_interfaces(${PROJECT_NAME}
+#   "msg/CombinedData.msg"
+#   DEPENDENCIES std_msgs geometry_msgs nav_msgs
+
+# )
+
+
+
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -53,7 +66,7 @@ add_executable(stair_ctrl_ros2 src/stair_ctrl_ros2.cpp)
 
 ament_target_dependencies(offboard_ctrl_ros2 rclcpp std_msgs geometry_msgs nav_msgs mavros_msgs tf2 tf2_ros tf2_msgs Eigen3)
 ament_target_dependencies(gazebo_ctrl_ros2 rclcpp std_msgs geometry_msgs nav_msgs mavros_msgs tf2 tf2_ros tf2_msgs Eigen3)
-ament_target_dependencies(stair_ctrl_ros2 rclcpp std_msgs geometry_msgs nav_msgs mavros_msgs tf2 tf2_ros tf2_msgs Eigen3)
+ament_target_dependencies(stair_ctrl_ros2 rclcpp std_msgs geometry_msgs nav_msgs mavros_msgs tf2 tf2_ros tf2_msgs Eigen3 msg_interfaces)
 
 
 
@@ -68,14 +81,11 @@ install(TARGETS offboard_ctrl_ros2 gazebo_ctrl_ros2 stair_ctrl_ros2
 install(DIRECTORY include/offboard_ros2/
   DESTINATION include/${PROJECT_NAME})
 
-# install(DIRECTORY launch/
-#   DESTINATION share/${PROJECT_NAME}/launch
-# )
-
-
-
-
+install(DIRECTORY launch/
+  DESTINATION share/${PROJECT_NAME}/launch
+)
 
 
 
 ament_package()
+

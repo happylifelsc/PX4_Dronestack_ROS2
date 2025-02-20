@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Launch urg_node for Hokuyo LiDAR -->
+    <node
+        pkg="urg_node"
+        exec="urg_node_driver"
+        name="urg_node_driver"
+        output="screen">
+        <param name="params_file" value="$(find-pkg-share urg_node)/launch/urg_node_ethernet.yaml"/>
+    </node>
+
+    <!-- Static transform from world to laser -->
+    <node
+        pkg="tf2_ros"
+        exec="static_transform_publisher"
+        name="static_transform_publisher"
+        output="screen"
+        args="0 0 0 0 0 0 world laser"/>
+
+    <!-- Robot State Publisher -->
+    <node
+        pkg="robot_state_publisher"
+        exec="robot_state_publisher"
+        name="robot_state_publisher"
+        output="screen">
+        <param name="robot_description" value="$(find-pkg-share urg_node)/launch/hokuyo_laser.urdf"/>
+    </node>
+
+    <!-- Launch stair control node -->
+    <node
+        pkg="offboard_ros2"
+        exec="stair_ctrl_ros2"
+        name="stair_ctrl_ros2"
+        output="screen"/>
+</launch>

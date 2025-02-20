@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from offboard_ros2/msg/CombinedData.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module offboard_ros2 {
+  module msg {
+    struct CombinedData {
+      std_msgs::msg::Header header;
+
+      float stair_pos_z;
+
+      float vicon_posi_x;
+
+      float vicon_posi_y;
+
+      float vicon_posi_z;
+    };
+  };
+};

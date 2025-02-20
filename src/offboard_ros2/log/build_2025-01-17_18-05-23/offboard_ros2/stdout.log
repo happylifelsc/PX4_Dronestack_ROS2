@@ -1,0 +1,29 @@
+[  5%] Built target gazebo_ctrl_ros2
+[ 16%] Built target offboard_ros2__rosidl_generator_c
+[ 18%] Built target offboard_ctrl_ros2
+[ 21%] Built target offboard_ros2__cpp
+[ 24%] [32mBuilding CXX object CMakeFiles/stair_ctrl_ros2.dir/src/stair_ctrl_ros2.cpp.o[0m
+[ 24%] Built target ament_cmake_python_copy_offboard_ros2
+[35m[1mConsolidate compiler generated dependencies of target offboard_ros2__rosidl_typesupport_introspection_c[0m
+[ 27%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[35m[1mConsolidate compiler generated dependencies of target offboard_ros2__rosidl_typesupport_fastrtps_c[0m
+[35m[1mConsolidate compiler generated dependencies of target offboard_ros2__rosidl_typesupport_c[0m
+[ 32%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[ 37%] Built target offboard_ros2__rosidl_typesupport_introspection_c
+[ 45%] Built target offboard_ros2__rosidl_typesupport_fastrtps_c
+[ 54%] Built target offboard_ros2__rosidl_typesupport_c
+[35m[1mConsolidate compiler generated dependencies of target offboard_ros2__rosidl_typesupport_introspection_cpp[0m
+[ 62%] Built target offboard_ros2__rosidl_typesupport_introspection_cpp
+[ 64%] [32mBuilding CXX object CMakeFiles/offboard_ros2__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/offboard_ros2/msg/combined_data__type_support.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/offboard_ros2__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/offboard_ros2/msg/detail/dds_fastrtps/combined_data__type_support.cpp.o[0m
+running egg_info
+writing offboard_ros2.egg-info/PKG-INFO
+writing dependency_links to offboard_ros2.egg-info/dependency_links.txt
+writing top-level names to offboard_ros2.egg-info/top_level.txt
+reading manifest file 'offboard_ros2.egg-info/SOURCES.txt'
+writing manifest file 'offboard_ros2.egg-info/SOURCES.txt'
+[ 67%] Built target ament_cmake_python_build_offboard_ros2_egg
+[ 70%] [32m[1mLinking CXX shared library liboffboard_ros2__rosidl_typesupport_cpp.so[0m
+[ 70%] Built target offboard_ros2__rosidl_typesupport_cpp
+[ 72%] [32m[1mLinking CXX shared library liboffboard_ros2__rosidl_typesupport_fastrtps_cpp.so[0m
+[ 72%] Built target offboard_ros2__rosidl_typesupport_fastrtps_cpp

@@ -1,0 +1,6 @@
+{
+  "package_name": "offboard_ros2",
+  "non_idl_tuples": [
+    "/home/orinnano/SDK_ros2_ws/src/offboard_ros2:msg/CombinedData.msg"
+  ]
+}
